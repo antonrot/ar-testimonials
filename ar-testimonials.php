@@ -39,9 +39,9 @@ if (!class_exists('AR_Testimonials')) {
         }
 
         public function define_constants() {
-            define('MV_SLIDER_PATH', plugin_dir_path(__FILE__));
-            define('MV_SLIDER_URL', plugin_dir_url(__FILE__));
-            define('MV_SLIDER_VERSION', '1.0.0');
+            define('AR_TESTIMONIALS_PATH', plugin_dir_path(__FILE__));
+            define('AR_TESTIMONIALS_URL', plugin_dir_url(__FILE__));
+            define('AR_TESTIMONIALS_VERSION', '1.0.0');
         }
 
         public static function activate() {
@@ -64,5 +64,5 @@ if (class_exists('AR_Testimonials')) {
     register_deactivation_hook(__FILE__, array('AR_Testimonials', 'deactivate'));
     register_uninstall_hook(__FILE__, array('AR_Testimonials', 'uninstall'));
 
-    $mv_slider = new AR_Testimonials();
+    new AR_Testimonials();
 }
